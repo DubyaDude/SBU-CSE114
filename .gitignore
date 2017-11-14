@@ -4,3 +4,4 @@
 .recommenders/*
 /.metadata/
 !.metadata/.plugins/org.eclipse.core.resources/.projects/**
+/.recommenders/
