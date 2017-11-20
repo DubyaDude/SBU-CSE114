@@ -3,10 +3,10 @@ import java.util.*;
 public class Welsh {
 
 	public static void main(String[] args) {
-		Scanner scn = new Scanner(System.in);
+		Scanner input = new Scanner(System.in);
 
-		System.out.println("Please enter a welsh word:");
-		String word = scn.nextLine();
+		System.out.println("Please enter a Welsh word:");
+		String word = input.nextLine();
 		System.out.println("Welsh Letters");
 		System.out.println(welshLetters(word));
 
@@ -15,21 +15,21 @@ public class Welsh {
 	public static ArrayList<String> welshLetters(String word) {
 		ArrayList<String> output = new ArrayList<String>();
 
-		int iterator = 0;
-		while (iterator < word.length()) {
-			if (iterator + 1 >= word.length()) {
-				output.add("" + word.charAt(iterator));
+		int i = 0;
+		while (i < word.length()) {
+			if (i + 1 >= word.length()) {
+				output.add("" + word.charAt(i));
 				break;
 			}
-			char c1 = word.charAt(iterator);
-			char c2 = word.charAt(iterator + 1);
+			char c1 = word.charAt(i);
+			char c2 = word.charAt(i + 1);
 
 			if (isDigraph("" + c1 + c2)) {
 				output.add("" + c1 + c2);
-				iterator += 2;
+				i += 2;
 			} else {
 				output.add("" + c1);
-				iterator++;
+				i++;
 			}
 
 		}
