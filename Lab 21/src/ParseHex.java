@@ -8,9 +8,9 @@ public class ParseHex {
 				char c = hex.charAt(i);
 				int value = 0;
 
-				if (c >= '0' && c < 'A') {
+				if (c >= '0' && c <= '9') {
 					value = c - '0';
-				} else if (c >= 'A' && c < 'F') {
+				} else if (c >= 'A' && c <= 'F') {
 					value = c - 'A' + 10;
 				} else {
 					throw new HexFormatException();
